@@ -1,4 +1,4 @@
-var separate_time = funcition(time){
+var separate_time = function(time){
   var sec   = time.getSeconds();
   var min   = time.getMinutes();
   var hours = time.getHours();
@@ -13,7 +13,7 @@ varcounter = separate_time(now);
 document.getElementById('form').select.onchange = function(){
   locaton.href = document.getElementById('form').select.value;
 }
-document.getElementById('countdown').textCountent =
+document.getElementById('countdown').textContent =
   counter[5] + '年' +
   counter[4] + '月' +
   counter[3] + '日' +
