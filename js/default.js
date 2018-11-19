@@ -29,7 +29,7 @@ if(filename === 'other.html'){
 }else{
   opt = document.querySelector('option[value="index.html"]');
 }
-opt.selected = ture;
+opt.selected = true;
 
 document.getElementById('form').select.onchange = function(){
   locaton.href = document.getElementById('form').select.value;
