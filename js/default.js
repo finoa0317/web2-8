@@ -10,9 +10,6 @@ var separate_time = function(time){
 
 var now = new Date();
 varcounter = separate_time(now);
-document.getElementById('form').select.onchange = function(){
-  locaton.href = document.getElementById('form').select.value;
-}
 document.getElementById('countdown').textContent =
   counter[5] + '年' +
   counter[4] + '月' +
@@ -20,3 +17,20 @@ document.getElementById('countdown').textContent =
   counter[2] + '時' +
   counter[1] + '分' +
   counter[0] + '秒' ;
+
+function getFileName() {
+  return window.location.href.split('/').pop();
+}
+
+var filename = getFilename();
+var opt;
+if(filename === 'other.html'){
+  opt = document.querySelector('option[value="other.html"]');
+}else{
+  opt = document.querySelector('option[value="index.html"]');
+}
+opt.selected = ture;
+    
+document.getElementById('form').select.onchange = function(){
+  locaton.href = document.getElementById('form').select.value;
+}
