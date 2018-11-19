@@ -18,6 +18,10 @@ document.getElementById('countdown').textContent =
   counter[1] + '分' +
   counter[0] + '秒' ;
 
+document.getElementById('form').select.onchange = function(){
+  locaton.href = document.getElementById('form').select.value;
+}
+
 function getFileName() {
   return window.location.href.split('/').pop();
 }
@@ -30,10 +34,6 @@ if(filename === 'other.html'){
   opt = document.querySelector('option[value="index.html"]');
 }
 opt.selected = ture;
-    
-document.getElementById('form').select.onchange = function(){
-  locaton.href = document.getElementById('form').select.value;
-}
 
 function setCookie(c_name,value,expiredays){
   var extime = new Date().getTime();
