@@ -10,6 +10,9 @@ var separate_time = funcition(time){
 
 var now = new Date();
 varcounter = separate_time(now);
+document.getElementById('form').select.onchange = function(){
+  locaton.href = document.getElementById('form').select.value;
+}
 document.getElementById('countdown').textCountent =
   counter[5] + '年' +
   counter[4] + '月' +
